@@ -8,16 +8,14 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Digital Garden",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    analytics: { provider: 'umami', host: '<gitnapp.github.io>', websiteId: '<9a5dbee5-7831-4c4c-9e2d-f6210cb0bc34>' },
+    locale: "zh-CN",
+    baseUrl: "gitnapp.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "published",    // created, modified, or published
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
