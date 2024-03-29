@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Digital Garden",
     enableSPA: true,
     enablePopovers: true,
-    analytics: { provider: 'umami', host: '<gitnapp.github.io>', websiteId: '<9a5dbee5-7831-4c4c-9e2d-f6210cb0bc34>' },
+    analytics: { provider: 'umami', host: 'analytics.us.umami.is', websiteId: '9a5dbee5-7831-4c4c-9e2d-f6210cb0bc34' },
     locale: "zh-CN",
     baseUrl: "gitnapp.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
