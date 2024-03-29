@@ -1,11 +1,10 @@
 ---
-title: Example Title
+title: 欢迎来访
 draft: false
 tags:
-  - example-tag
+  - Quartz/欢迎
+date: "[[2024-03-29]]"
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
-
-The rest of your content lives here. You can use **Markdown** here 😀
+朋友你好，别来无恙！
+这是我的数字花园，记录着我的生活点滴。
