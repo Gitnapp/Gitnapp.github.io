@@ -2,7 +2,7 @@
 title: 欢迎来访
 draft: false
 tags:
-  - DigitalGarden/欢迎
+  - DigitalGarden/目录
 date: 2024-03-29
 ---
 
