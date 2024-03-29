@@ -2,8 +2,8 @@
 title: 欢迎来访
 draft: false
 tags:
-  - Quartz/欢迎
-date: "[[2024-03-29]]"
+  - DigitalGarden/欢迎
+date: 2024-03-29
 ---
 
 朋友你好，别来无恙！
