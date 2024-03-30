@@ -12,7 +12,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: { provider: 'google', tagId: 'G-YD9QB88Q1F' },
-    locale: "zh-CN",
+    locale: "en-US",
     baseUrl: "12701.top",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",    // created, modified, or published
