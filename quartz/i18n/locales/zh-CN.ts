@@ -54,7 +54,7 @@ export default {
       title: "目录",
     },
     contentMeta: {
-      readingTime: ({ minutes }) => `大约阅读 ${minutes} 分钟`,
+      readingTime: ({ minutes }) => `阅读需 ${minutes} 分钟`,
     },
   },
   pages: {
