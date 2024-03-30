@@ -1,5 +1,5 @@
 ---
-title: 欢迎来访我的数字花园
+title: 欢迎访问我的数字花园
 draft: false
 tags:
   - 数字花园
