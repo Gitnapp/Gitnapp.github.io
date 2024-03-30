@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: { provider: 'google', tagId: 'G-YD9QB88Q1F' },
     locale: "zh-CN",
-    baseUrl: "gitnapp.github.io",
+    baseUrl: "12701.top",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",    // created, modified, or published
     theme: {
