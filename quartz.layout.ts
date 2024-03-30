@@ -7,6 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
+      RSS: "https://gitnapp.github.io/index.xml/",
       NeoDB: "https://neodb.social/users/Neptune/",
     },
   }),

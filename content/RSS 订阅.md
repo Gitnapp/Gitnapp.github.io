@@ -1,1 +1,0 @@
-本站点支持 RSS 订阅，[点击订阅](https://gitnapp.github.io/index.xml)。

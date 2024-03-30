@@ -8,14 +8,14 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Digital Garden",
+    pageTitle: "🪴 数字花园",
     enableSPA: true,
     enablePopovers: true,
     analytics: { provider: 'google', tagId: 'G-YD9QB88Q1F' },
     locale: "zh-CN",
     baseUrl: "gitnapp.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "published",    // created, modified, or published
+    defaultDateType: "created",    // created, modified, or published
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
