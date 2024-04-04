@@ -1,3 +1,11 @@
+---
+title: Obsidian 手动备份笔记库造成的灾难
+draft: false
+tags:
+  - 数字花园/文章
+  - "#软件/Obsidian"
+date: 2024-04-05
+---
 
 > [!环境配置] 
 > - 使用 Alist 挂载阿里云盘
