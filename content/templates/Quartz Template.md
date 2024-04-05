@@ -1,7 +1,7 @@
 ---
 title: Example Title
 draft: false
-tags: 
+tags: []
 date:
 ---
 
