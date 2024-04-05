@@ -36,6 +36,7 @@ export function googleFontHref(theme: Theme) {
   return `https://fonts.googleapis.com/css2?family=${code}&family=${header}:wght@400;700&family=${body}:ital,wght@0,400;0,600;1,400;1,600&display=swap`
 }
 
+// 备注：此处设置字体的样式
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
   return `
 ${stylesheet.join("\n\n")}

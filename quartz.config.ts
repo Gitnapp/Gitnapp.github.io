@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Digital Garden",
+    pageTitle: "观澜",
     enableSPA: true,
     enablePopovers: true,
     analytics: { provider: 'google', tagId: 'G-YD9QB88Q1F' },
@@ -44,7 +44,7 @@ const config: QuartzConfig = {
           // tertiary: "#84a59d",
           tertiary: "#a69e8a",
           // highlight: "rgba(143, 159, 169, 0.15)",
-          highlight: "rgba(0, 0, 0, 0)",
+          highlight: "rgba(0, 0, 0, 0.05)",
         },
         darkMode: {
           // light: "#161618",

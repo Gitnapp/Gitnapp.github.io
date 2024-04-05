@@ -2,7 +2,7 @@
 title: Obsidian 手动备份笔记库造成的灾难
 draft: false
 tags:
-  - 数字花园/文章
+  - 观澜/文章
 date: 2024-04-05
 ---
 
