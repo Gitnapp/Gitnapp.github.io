@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 数字花园",
+    pageTitle: "🪴 Digital Garden",
     enableSPA: true,
     enablePopovers: true,
     analytics: { provider: 'google', tagId: 'G-YD9QB88Q1F' },
@@ -23,20 +23,28 @@ const config: QuartzConfig = {
         // header: "Schibsted Grotesk",
         // body: "Source Sans Pro",
         // code: "IBM Plex Mono",
-        header: "Noto Serif HK",
-        body: "Noto Serif HK",
+        //To configure heading font, go `theme.ts` Line 53.
+        header: "STSong",
+        body: "STSong",
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
+          // light: "#faf8f8",
+          light: "#fdf6e3",
+          // lightgray: "#e5e5e5",
+          lightgray: "#eee8d9",
+          // gray: "#b8b8b8",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          // dark: "#2b2b2b",
+          dark: "#232a2e",
+          // secondary: "#284b63",
+          secondary: "#37352e",
+          // tertiary: "#84a59d",
+          tertiary: "#a69e8a",
+          // highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "rgba(0, 0, 0, 0)",
         },
         darkMode: {
           // light: "#161618",

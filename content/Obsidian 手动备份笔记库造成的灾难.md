@@ -6,7 +6,7 @@ tags:
 date: 2024-04-05
 ---
 
-> [!环境配置] 
+> [!note] 环境配置
 > - 使用 Alist 挂载阿里云盘
 > - 使用 Obsidian 保存笔记
 > - 使用 Remotely-Sync 插件同步笔记
