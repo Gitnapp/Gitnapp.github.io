@@ -47,15 +47,22 @@ const config: QuartzConfig = {
           highlight: "rgba(0, 0, 0, 0.05)",
         },
         darkMode: {
-          // light: "#161618",
-          light: "#111622",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          // light: "#161618",background,a4bb7e#green
+          light: "#2e353b",
+          // lightgray: "#393639",dotted graph
+          lightgray: "#475258",
+          // gray: "#646464",related dots and date,time
+          gray: "#9da9a0",
+          // darkgray: "#d4d4d4",text
+          darkgray: "#d3c6aa",
+          // dark: "#ebebec",title and subtitles
+          dark: "#d3c6aa",
+          // secondary: "#7b97aa",website title,tags and breadcrumbs
+          secondary: "#9da9a0",
+          // tertiary: "#84a59d",on hover, default dots
+          tertiary: "#a4bb7e",
+          // highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "rgba(0, 0, 0, 0, 0.05)",
         },
       },
     },
