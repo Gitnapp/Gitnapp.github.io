@@ -18,6 +18,7 @@ export default (() => {
     const iconPath = joinSegments(baseDir, "static/icon.png")
     const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
+// 备注：更改网站标题
     return (
       <head>
         <title>{title}</title>
