@@ -30,21 +30,22 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          // light: "#faf8f8",
+          // light: "#faf8f8",background
           light: "#fdf6e3",
-          // lightgray: "#e5e5e5",
-          lightgray: "#eee8d9",
-          // gray: "#b8b8b8",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          // dark: "#2b2b2b",
+          // lightgray: "#e5e5e5",dotted graph & search bar
+          lightgray: "rgba(62,35,6, 0.20)",
+          // gray: "#b8b8b8",related dots and date,time
+          gray: "#797979",
+          // darkgray: "#4e4e4e",text
+          darkgray: "#212121",
+          // dark: "#2b2b2b",title and subtitles
           dark: "#232a2e",
-          // secondary: "#284b63",
-          secondary: "#37352e",
-          // tertiary: "#84a59d",
-          tertiary: "#a69e8a",
-          // highlight: "rgba(143, 159, 169, 0.15)",
-          highlight: "rgba(0, 0, 0, 0.05)",
+          // secondary: "#284b63",website title,tags and breadcrumbs
+          secondary: "#603606",
+          // tertiary: "#84a59d",on hover, default dots, selected
+          tertiary: "rgba(134, 75, 3, 0.50)",
+          // highlight: "rgba(143, 159, 169, 0.15)",highlight
+          highlight: "rgba(0, 0, 0, 0.00)",
         },
         darkMode: {
           // light: "#161618",background,a4bb7e#green
@@ -62,7 +63,7 @@ const config: QuartzConfig = {
           // tertiary: "#84a59d",on hover, default dots
           tertiary: "#a4bb7e",
           // highlight: "rgba(143, 159, 169, 0.15)",
-          highlight: "rgba(0, 0, 0, 0, 0.05)",
+          highlight: "rgba(0, 0, 0, 0, 0.00)",
         },
       },
     },
