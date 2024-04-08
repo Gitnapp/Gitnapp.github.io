@@ -51,8 +51,8 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
 
-  --headerFont: "Times New Roman", "serif", "ui-serif", "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
-  --bodyFont: "Times New Roman", "serif", "ui-serif", "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
+  --headerFont: "Times New Roman", serif, ui-serif, "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
+  --bodyFont: "Times New Roman", serif, ui-serif, "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
   --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
 }
 
