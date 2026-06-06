@@ -1,31 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectTile from "../layouts/ProjectTile.astro";
 import { featuredProjects, principles } from "../data/projects";
 ---
 
 <BaseLayout>
-  <main class="portfolio">
-    <section class="portfolio-hero" aria-labelledby="portfolio-title">
-      <div class="portfolio-shell hero-grid">
-        <div class="hero-copy">
-          <h1 id="portfolio-title">Eric Yu</h1>
-          <p class="hero-lede">Building AI-agent tools, macOS utilities, and automation systems.</p>
-          <p class="hero-body">
-            I build practical software around AI workflows, developer tools, and small utilities that remove repetitive work.
-          </p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a class="button-primary" href="https://github.com/Gitnapp" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="button-secondary" href="/archive">Writing</a>
+  <main class="portfolio-apple">
+    <section class="everydayfeed portfolio-apple-hero">
+      <div class="featured-header with-keyline">
+        <div class="pagetitle">
+          <div class="component-content">
+            <h1 class="hero-headline">Eric Yu</h1>
           </div>
         </div>
+        <p class="featured-subhead">Building AI-agent tools, macOS utilities, and automation systems.</p>
+        <p class="portfolio-apple-intro">
+          Practical software around AI workflows, developer tools, and small utilities that remove repetitive work.
+        </p>
+        <div class="portfolio-apple-actions">
+          <a href="https://github.com/Gitnapp" class="cta-primary-light" target="_blank" rel="noreferrer">View GitHub</a>
+          <a href="/archive" class="cta-primary-light">Read writing</a>
+        </div>
+      </div>
 
-        <aside class="hero-card" aria-label="Current focus">
-          <div class="hero-card-mark">EY</div>
+      <div class="section-content portfolio-hero-summary">
+        <article class="portfolio-summary-card nr-scroll-animation" style="--nr-animation-transform-y:20%;">
           <div>
-            <p class="hero-card-title">Current focus</p>
-            <p class="hero-card-copy">Agent workflows, local-first automation, Swift utilities, and focused web tools.</p>
+            <h2>Current focus</h2>
+            <p>Agent workflows, local-first automation, Swift utilities, and focused web tools.</p>
           </div>
-          <dl class="hero-metrics">
+          <dl>
             <div>
               <dt>Stack</dt>
               <dd>TypeScript / Python / Swift</dd>
@@ -35,66 +39,56 @@ import { featuredProjects, principles } from "../data/projects";
               <dd>Prototype to production</dd>
             </div>
           </dl>
-        </aside>
+        </article>
       </div>
     </section>
 
-    <section class="portfolio-section" id="work" aria-labelledby="work-title">
-      <div class="portfolio-shell">
-        <div class="section-heading">
-          <h2 id="work-title">Selected work</h2>
-          <a href="/projects" class="text-link">View all projects</a>
+    <section class="more-from-newsroom portfolio-apple-work" id="work">
+      <div class="section-content">
+        <div class="portfolio-section-header">
+          <h2 class="section-head">Selected work</h2>
+          <a href="/projects" class="portfolio-view-all">View all projects</a>
         </div>
 
-        <div class="project-grid">
-          {featuredProjects.map((project) => (
-            <article class="project-card">
-              <div class="project-card-topline">
-                <span class="project-mark">{project.accent}</span>
-                <span class="project-kind">{project.kind}</span>
-              </div>
-              <h3>{project.name}</h3>
-              <p>{project.summary}</p>
-              <ul class="stack-list" aria-label={`${project.name} stack`}>
-                {project.stack.map((item) => <li>{item}</li>)}
-              </ul>
-              <div class="project-links">
-                <a href={project.href} target="_blank" rel="noreferrer">Repository</a>
-                {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Demo</a>}
-              </div>
-            </article>
+        <ul role="list" class="section-tiles portfolio-project-tiles">
+          {featuredProjects.map((project) => <ProjectTile project={project} level="2" />)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="everydayfeed portfolio-principles">
+      <div class="section-content">
+        <h2 class="section-head">How I build</h2>
+        <ul class="portfolio-principle-tiles" role="list">
+          {principles.map((principle) => (
+            <li class="nr-scroll-animation" style="--nr-animation-transform-y:20%;">{principle}</li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
 
-    <section class="portfolio-section portfolio-split" aria-labelledby="principles-title">
-      <div class="portfolio-shell split-grid">
+    <section class="more-from-newsroom portfolio-writing">
+      <div class="section-content portfolio-writing-inner">
         <div>
-          <h2 id="principles-title">How I build</h2>
-          <p>
-            I like software that earns its place: clear inputs, fast feedback, boring reliability, and enough craft that people actually want to keep using it.
-          </p>
+          <h2 class="section-head">Writing and notes</h2>
+          <p>I keep a small writing archive for technical notes, experiments, and work-in-progress thoughts.</p>
         </div>
-        <ol class="principle-list">
-          {principles.map((principle) => <li>{principle}</li>)}
-        </ol>
-      </div>
-    </section>
-
-    <section class="portfolio-section contact-band" aria-labelledby="writing-title">
-      <div class="portfolio-shell contact-grid">
-        <div>
-          <h2 id="writing-title">Writing and notes</h2>
-          <p>
-            I keep a small writing archive for technical notes, experiments, and work-in-progress thoughts.
-          </p>
-        </div>
-        <div class="contact-links">
-          <a href="/archive">Read archive</a>
-          <a href="https://github.com/Gitnapp" target="_blank" rel="noreferrer">GitHub profile</a>
+        <div class="view-archive-wrapper">
+          <a href="/archive" class="cta-primary-light">Read archive</a>
         </div>
       </div>
     </section>
   </main>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      var script = document.createElement("script");
+      script.src = "/static/js/animation.js";
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        initImage();
+      };
+    });
+  </script>
 </BaseLayout>

@@ -1,44 +1,44 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectTile from "../layouts/ProjectTile.astro";
 import { featuredProjects } from "../data/projects";
 ---
 
 <BaseLayout primaryTitle="Projects">
-  <main class="portfolio">
-    <section class="portfolio-page-head">
-      <div class="portfolio-shell">
-        <a class="back-link" href="/">Back to home</a>
-        <h1>Projects</h1>
-        <p>
-          A focused selection of AI-agent tooling, macOS utilities, automation skills, and small web tools.
-        </p>
-      </div>
-    </section>
-
-    <section class="portfolio-section">
-      <div class="portfolio-shell">
-        <div class="project-list">
-          {featuredProjects.map((project) => (
-            <article class="project-row">
-              <div class="project-row-main">
-                <div class="project-card-topline">
-                  <span class="project-mark">{project.accent}</span>
-                  <span class="project-kind">{project.kind}</span>
-                </div>
-                <h2>{project.name}</h2>
-                <p>{project.summary}</p>
-                <ul class="stack-list" aria-label={`${project.name} stack`}>
-                  {project.stack.map((item) => <li>{item}</li>)}
-                </ul>
-              </div>
-              <div class="project-row-actions">
-                <a href={project.href} target="_blank" rel="noreferrer">Repository</a>
-                {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Demo</a>}
-              </div>
-            </article>
-          ))}
+  <main class="portfolio-apple">
+    <section class="everydayfeed portfolio-page-hero">
+      <div class="featured-header with-keyline">
+        <div class="pagetitle">
+          <div class="component-content">
+            <h1 class="hero-headline">Projects</h1>
+          </div>
+        </div>
+        <p class="featured-subhead">AI-agent tooling, macOS utilities, automation skills, and small web tools.</p>
+        <div class="portfolio-apple-actions">
+          <a href="/" class="cta-primary-light">Back home</a>
         </div>
       </div>
     </section>
+
+    <section class="more-from-newsroom">
+      <div class="section-content">
+        <h2 class="section-head">Selected work</h2>
+        <ul role="list" class="section-tiles portfolio-project-tiles">
+          {featuredProjects.map((project) => <ProjectTile project={project} level="2" />)}
+        </ul>
+      </div>
+    </section>
   </main>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      var script = document.createElement("script");
+      script.src = "/static/js/animation.js";
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        initImage();
+      };
+    });
+  </script>
 </BaseLayout>

@@ -62,7 +62,7 @@ function viewPortLoad(index) {
 
 
 function lazyAnimation() {
-  images = document.querySelectorAll(animationElementName);
+  let images = document.querySelectorAll(animationElementName);
   viewPortLoad(0);
 }
 
@@ -72,7 +72,7 @@ function isElementInView(element) {
   const rect = element.getBoundingClientRect();
   const elementTop = rect.top;
   const elementBottom = rect.bottom;
-  return (elementTop >= 0 && elementBottom - 200 <= window.innerHeight);
+  return (elementTop < window.innerHeight - 120 && elementBottom > 120);
 }
 
 function debounce(fn, delay) {
