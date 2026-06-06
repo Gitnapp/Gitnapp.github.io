@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { featuredProjects } from "../data/projects";
+---
+
+<BaseLayout primaryTitle="Projects">
+  <main class="portfolio">
+    <section class="portfolio-page-head">
+      <div class="portfolio-shell">
+        <a class="back-link" href="/">Back to home</a>
+        <h1>Projects</h1>
+        <p>
+          A focused selection of AI-agent tooling, macOS utilities, automation skills, and small web tools.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="portfolio-shell">
+        <div class="project-list">
+          {featuredProjects.map((project) => (
+            <article class="project-row">
+              <div class="project-row-main">
+                <div class="project-card-topline">
+                  <span class="project-mark">{project.accent}</span>
+                  <span class="project-kind">{project.kind}</span>
+                </div>
+                <h2>{project.name}</h2>
+                <p>{project.summary}</p>
+                <ul class="stack-list" aria-label={`${project.name} stack`}>
+                  {project.stack.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+              <div class="project-row-actions">
+                <a href={project.href} target="_blank" rel="noreferrer">Repository</a>
+                {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Demo</a>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -2,34 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout primaryTitle="关于">
-  <section class="archive">
-    <div class="section-content section-tag">
-      <div class="archive-tag">
-        <h2 class="tag-header">关于我</h2>
-        <div class="tag-post-list">
-          <ul>
-            <li>一个学生</li>
-            <li>爱折腾</li>
-            <li>爱音乐</li>
-          </ul>
+<BaseLayout primaryTitle="About">
+  <main class="portfolio">
+    <section class="portfolio-page-head">
+      <div class="portfolio-shell">
+        <a class="back-link" href="/">Back to home</a>
+        <h1>About</h1>
+        <p>
+          I am Eric Yu, a developer building practical tools around AI workflows, automation, and focused macOS utilities.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio-section portfolio-split">
+      <div class="portfolio-shell split-grid">
+        <div>
+          <h2>Focus</h2>
+          <p>
+            My work sits around small, useful systems: agent workflows, local-first automation, developer tooling, and software that turns repeated manual steps into dependable routines.
+          </p>
+        </div>
+        <div class="about-panel">
+          <h3>Links</h3>
+          <a href="https://github.com/Gitnapp" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="/projects">Projects</a>
+          <a href="/archive">Writing archive</a>
         </div>
       </div>
-
-      <div class="archive-tag">
-        <h2 class="tag-header">关注我</h2>
-        <div class="tag-post-list">
-          <ul>
-            <li>
-              <a href="https://twitter.com/austinit" target="_blank"> Twitter</a>
-            </li>
-            <li>
-              <a href="https://github.com/austin2035" target="_blank">Github</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 </BaseLayout>

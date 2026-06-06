@@ -1,79 +1,100 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Tile from "../layouts/Tile.astro";
-import MoreTile from "../layouts/MoreTile.astro";
-const allPosts = await Astro.glob("../pages/posts/*.md");
-allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+import { featuredProjects, principles } from "../data/projects";
 ---
 
 <BaseLayout>
-  <section class="everydayfeed">
-    <div class="section-content">
-      <h2 class="section-head">最新文章</h2>
-      <ul role="list" class="section-tiles">
-        {
-          // tile-hero
-          allPosts.slice(0, 1).map((post) => {
-            return (
-              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="1" />
-            );
-          })
-        }
+  <main class="portfolio">
+    <section class="portfolio-hero" aria-labelledby="portfolio-title">
+      <div class="portfolio-shell hero-grid">
+        <div class="hero-copy">
+          <h1 id="portfolio-title">Eric Yu</h1>
+          <p class="hero-lede">Building AI-agent tools, macOS utilities, and automation systems.</p>
+          <p class="hero-body">
+            I build practical software around AI workflows, developer tools, and small utilities that remove repetitive work.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button-primary" href="https://github.com/Gitnapp" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button-secondary" href="/archive">Writing</a>
+          </div>
+        </div>
 
-        {
-          // tile-2up
-          allPosts.slice(1, 5).map((post) => {
-            return (
-              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="2" />
-            );
-          })
-        }
-
-        {
-          // tile-3up
-          allPosts.slice(5, 11).map((post) => {
-            return (
-              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
-            );
-          })
-        }
-      </ul>
-    </div>
-  </section>
-
-  <section class="more-from-newsroom">
-    <div class="section-content">
-      <h2 class="section-head">更多文章</h2>
-   
-
-      <ul role="list" class="section-tiles">
-
-        {
-          // tile-2up
-          allPosts.slice(0, 6).map((post) => {
-            return (
-              <MoreTile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.square !== "" ? post.frontmatter.cover.square : post.frontmatter.cover.url} />
-            );
-          })
-        }
-      </ul>
-      <div class="view-archive-wrapper">
-        <a href="/archive" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">阅读历史文章</a>
+        <aside class="hero-card" aria-label="Current focus">
+          <div class="hero-card-mark">EY</div>
+          <div>
+            <p class="hero-card-title">Current focus</p>
+            <p class="hero-card-copy">Agent workflows, local-first automation, Swift utilities, and focused web tools.</p>
+          </div>
+          <dl class="hero-metrics">
+            <div>
+              <dt>Stack</dt>
+              <dd>TypeScript / Python / Swift</dd>
+            </div>
+            <div>
+              <dt>Mode</dt>
+              <dd>Prototype to production</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
-      var script = document.createElement("script");
-      script.src = "/static/js/animation.js";
-      document.head.appendChild(script);
+    <section class="portfolio-section" id="work" aria-labelledby="work-title">
+      <div class="portfolio-shell">
+        <div class="section-heading">
+          <h2 id="work-title">Selected work</h2>
+          <a href="/projects" class="text-link">View all projects</a>
+        </div>
 
-      script.onload = function () {
-        console.log("lazyload.js loaded");
-        // when layout is loaded, load the images
-        initImage();
-      };
-    });
-  </script>
+        <div class="project-grid">
+          {featuredProjects.map((project) => (
+            <article class="project-card">
+              <div class="project-card-topline">
+                <span class="project-mark">{project.accent}</span>
+                <span class="project-kind">{project.kind}</span>
+              </div>
+              <h3>{project.name}</h3>
+              <p>{project.summary}</p>
+              <ul class="stack-list" aria-label={`${project.name} stack`}>
+                {project.stack.map((item) => <li>{item}</li>)}
+              </ul>
+              <div class="project-links">
+                <a href={project.href} target="_blank" rel="noreferrer">Repository</a>
+                {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Demo</a>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section portfolio-split" aria-labelledby="principles-title">
+      <div class="portfolio-shell split-grid">
+        <div>
+          <h2 id="principles-title">How I build</h2>
+          <p>
+            I like software that earns its place: clear inputs, fast feedback, boring reliability, and enough craft that people actually want to keep using it.
+          </p>
+        </div>
+        <ol class="principle-list">
+          {principles.map((principle) => <li>{principle}</li>)}
+        </ol>
+      </div>
+    </section>
+
+    <section class="portfolio-section contact-band" aria-labelledby="writing-title">
+      <div class="portfolio-shell contact-grid">
+        <div>
+          <h2 id="writing-title">Writing and notes</h2>
+          <p>
+            I keep a small writing archive for technical notes, experiments, and work-in-progress thoughts.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="/archive">Read archive</a>
+          <a href="https://github.com/Gitnapp" target="_blank" rel="noreferrer">GitHub profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
