@@ -5,7 +5,7 @@ export const featuredProjects = [
     kind: "macOS app",
     stack: ["Dart", "Flutter", "Markdown"],
     href: "https://github.com/Gitnapp/Typen",
-    cover: "/projects/typen.svg",
+    cover: "/projects/typen.jpg",
     accent: "TP",
   },
   {
@@ -14,7 +14,7 @@ export const featuredProjects = [
     kind: "macOS utility",
     stack: ["Swift", "SwiftUI", "Menu Bar"],
     href: "https://github.com/Gitnapp/BrowserQuickSwitch",
-    cover: "/projects/browserquickswitch.svg",
+    cover: "/projects/browserquickswitch.jpg",
     accent: "BQ",
   },
   {
@@ -23,7 +23,7 @@ export const featuredProjects = [
     kind: "macOS utility",
     stack: ["Swift", "SwiftUI", "NSWorkspace"],
     href: "https://github.com/Gitnapp/iconify",
-    cover: "/projects/iconify.svg",
+    cover: "/projects/iconify.jpg",
     accent: "IC",
   },
   {
@@ -32,7 +32,7 @@ export const featuredProjects = [
     kind: "automation skill",
     stack: ["Shell", "curl", "jq"],
     href: "https://github.com/Gitnapp/sushiro-skill",
-    cover: "/projects/sushiro-skill.svg",
+    cover: "/projects/sushiro-skill.jpg",
     accent: "SQ",
   },
   {
@@ -41,7 +41,7 @@ export const featuredProjects = [
     kind: "AI tooling",
     stack: ["Python", "Agents", "Automation"],
     href: "https://github.com/Gitnapp/Skills",
-    cover: "/projects/skills.svg",
+    cover: "/projects/skills.jpg",
     accent: "SK",
   },
   {
@@ -51,7 +51,7 @@ export const featuredProjects = [
     stack: ["TypeScript", "Next.js", "Tailwind"],
     href: "https://github.com/Gitnapp/cargo-loading-calc",
     demo: "https://cargoloadingcalc.vercel.app",
-    cover: "/projects/cargo-loading-calc.svg",
+    cover: "/projects/cargo-loading-calc.jpg",
     accent: "CL",
   },
 ];

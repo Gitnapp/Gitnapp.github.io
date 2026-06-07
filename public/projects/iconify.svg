@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="iconify project preview">
-  <rect width="1200" height="760" fill="#f5f5f7"/>
-  <rect x="224" y="156" width="752" height="448" rx="42" fill="#ffffff" stroke="#d2d2d7"/>
-  <path d="M382 296h436v210H382z" fill="#e8f3f1"/>
-  <path d="M382 254h180l48 42h208v64H382z" fill="#0b7a75"/>
-  <path d="M500 445l58-58 50 50 92-92 54 54" fill="none" stroke="#1d1d1f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="340" y="548" fill="#6e6e73" font-family="-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="40" font-weight="700">Folder icon utility</text>
-</svg>
