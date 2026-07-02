@@ -3,7 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_LANG} from "../consts";
-const { primaryTitle } = Astro.props;
+const { primaryTitle, bare = false, bodyClass = "page-landing" } = Astro.props;
 const title = primaryTitle ? `${primaryTitle}  -  ${SITE_TITLE}`  : SITE_TITLE;
 ---
 
@@ -11,9 +11,9 @@ const title = primaryTitle ? `${primaryTitle}  -  ${SITE_TITLE}`  : SITE_TITLE;
   <head>
     <BaseHead title={title} description={SITE_DESCRIPTION} />
   </head>
-  <body class="page-landing">
-    <Header />
+  <body class={bodyClass}>
+    {!bare && <Header />}
     <slot />
-    <Footer />
+    {!bare && <Footer />}
   </body>
 </html>

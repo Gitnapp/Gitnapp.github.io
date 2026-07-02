@@ -1,94 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectTile from "../layouts/ProjectTile.astro";
-import { featuredProjects, principles } from "../data/projects";
 ---
 
-<BaseLayout>
-  <main class="portfolio-apple">
-    <section class="everydayfeed portfolio-apple-hero">
-      <div class="featured-header with-keyline">
-        <div class="pagetitle">
-          <div class="component-content">
-            <h1 class="hero-headline">Eric Yu</h1>
-          </div>
-        </div>
-        <p class="featured-subhead">Building AI-agent tools, macOS utilities, and automation systems.</p>
-        <p class="portfolio-apple-intro">
-          Practical software around AI workflows, developer tools, and small utilities that remove repetitive work.
-        </p>
-        <div class="portfolio-apple-actions">
-          <a href="https://github.com/Gitnapp" class="cta-primary-light" target="_blank" rel="noreferrer">View GitHub</a>
-          <a href="/archive" class="cta-primary-light">Read writing</a>
-        </div>
-      </div>
+<BaseLayout bare bodyClass="page-quiet">
+  <main class="quiet-home" aria-label="Eric Yu">
+    <header class="quiet-top">
+      <a class="quiet-name" href="/" aria-current="page">Eric Yu</a>
+      <p>Builder</p>
+    </header>
 
-      <div class="section-content portfolio-hero-summary">
-        <article class="portfolio-summary-card nr-scroll-animation" style="--nr-animation-transform-y:20%;">
-          <div>
-            <h2>Current focus</h2>
-            <p>Agent workflows, local-first automation, Swift utilities, and focused web tools.</p>
-          </div>
-          <dl>
-            <div>
-              <dt>Stack</dt>
-              <dd>TypeScript / Python / Swift</dd>
-            </div>
-            <div>
-              <dt>Mode</dt>
-              <dd>Prototype to production</dd>
-            </div>
-          </dl>
-        </article>
-      </div>
-    </section>
+    <h1 class="quiet-statement">I make tools that ask for less attention.</h1>
 
-    <section class="more-from-newsroom portfolio-apple-work" id="work">
-      <div class="section-content">
-        <div class="portfolio-section-header">
-          <h2 class="section-head">Selected work</h2>
-          <a href="/projects" class="portfolio-view-all">View all projects</a>
-        </div>
-
-        <ul role="list" class="section-tiles portfolio-project-tiles">
-          {featuredProjects.map((project) => <ProjectTile project={project} level="2" />)}
-        </ul>
-      </div>
-    </section>
-
-    <section class="everydayfeed portfolio-principles">
-      <div class="section-content">
-        <h2 class="section-head">How I build</h2>
-        <ul class="portfolio-principle-tiles" role="list">
-          {principles.map((principle) => (
-            <li class="nr-scroll-animation" style="--nr-animation-transform-y:20%;">{principle}</li>
-          ))}
-        </ul>
-      </div>
-    </section>
-
-    <section class="more-from-newsroom portfolio-writing">
-      <div class="section-content portfolio-writing-inner">
-        <div>
-          <h2 class="section-head">Writing and notes</h2>
-          <p>I keep a small writing archive for technical notes, experiments, and work-in-progress thoughts.</p>
-        </div>
-        <div class="view-archive-wrapper">
-          <a href="/archive" class="cta-primary-light">Read archive</a>
-        </div>
-      </div>
-    </section>
+    <footer class="quiet-bottom">
+      <p>AI agents. macOS. Automation.</p>
+      <nav class="quiet-links" aria-label="Links">
+        <a href="/projects">Selected work</a>
+        <a href="/archive">Notes</a>
+        <a href="https://github.com/Gitnapp" target="_blank" rel="noreferrer">Contact</a>
+      </nav>
+    </footer>
   </main>
-
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
-      var script = document.createElement("script");
-      script.src = "/static/js/animation.js";
-      document.head.appendChild(script);
-
-      script.onload = function () {
-        initImage();
-      };
-    });
-  </script>
 </BaseLayout>

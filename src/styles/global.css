@@ -8275,3 +8275,130 @@ blockquote p {
     font-size: 19px;
   }
 }
+
+:root {
+  --quiet-paper: #f7f4ee;
+  --quiet-ink: #111111;
+  --quiet-soft: #716c63;
+  --quiet-focus: #8f6f45;
+}
+
+body.page-quiet {
+  min-width: 0;
+  background: var(--quiet-paper);
+  color: var(--quiet-ink);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.35;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.page-quiet a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.22em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+body.page-quiet a:hover {
+  color: var(--quiet-ink);
+}
+
+body.page-quiet a:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--quiet-focus);
+  outline-offset: 4px;
+}
+
+.quiet-home {
+  box-sizing: border-box;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 56px;
+}
+
+.quiet-top,
+.quiet-bottom {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  color: var(--quiet-soft);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.quiet-top p,
+.quiet-bottom p {
+  margin: 0;
+}
+
+.quiet-name {
+  color: var(--quiet-ink);
+  text-decoration: none !important;
+}
+
+.quiet-statement {
+  align-self: center;
+  max-width: 10.5ch;
+  margin: 0;
+  color: var(--quiet-ink);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 6.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.quiet-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .quiet-home {
+    padding: 44px;
+  }
+
+  .quiet-statement {
+    font-size: 5.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .quiet-home {
+    min-height: 100dvh;
+    padding: 30px 28px;
+  }
+
+  .quiet-top,
+  .quiet-bottom {
+    display: block;
+  }
+
+  .quiet-bottom {
+    align-self: end;
+  }
+
+  .quiet-links {
+    gap: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .quiet-statement {
+    font-size: 3.1rem;
+    max-width: 9.6ch;
+  }
+}
+
+@media (max-width: 360px) {
+  .quiet-statement {
+    font-size: 2.75rem;
+  }
+}
