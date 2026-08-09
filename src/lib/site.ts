@@ -1,4 +1,20 @@
-export const featuredProjects = [
+export const site = {
+  title: "Eric Yu",
+  description: "I make tools that ask for less attention.",
+  github: "https://github.com/Gitnapp",
+}
+
+export type Project = {
+  name: string
+  summary: string
+  kind: string
+  stack: string[]
+  href: string
+  demo?: string
+  cover: string
+}
+
+export const projects: Project[] = [
   {
     name: "Typen",
     summary: "A focused Markdown editor for macOS, built as an open-source Typora alternative.",
@@ -6,7 +22,6 @@ export const featuredProjects = [
     stack: ["Dart", "Flutter", "Markdown"],
     href: "https://github.com/Gitnapp/Typen",
     cover: "/projects/typen.jpg",
-    accent: "TP",
   },
   {
     name: "BrowserQuickSwitch",
@@ -15,7 +30,6 @@ export const featuredProjects = [
     stack: ["Swift", "SwiftUI", "Menu Bar"],
     href: "https://github.com/Gitnapp/BrowserQuickSwitch",
     cover: "/projects/browserquickswitch.jpg",
-    accent: "BQ",
   },
   {
     name: "iconify",
@@ -24,7 +38,6 @@ export const featuredProjects = [
     stack: ["Swift", "SwiftUI", "NSWorkspace"],
     href: "https://github.com/Gitnapp/iconify",
     cover: "/projects/iconify.jpg",
-    accent: "IC",
   },
   {
     name: "sushiro-skill",
@@ -33,7 +46,6 @@ export const featuredProjects = [
     stack: ["Shell", "curl", "jq"],
     href: "https://github.com/Gitnapp/sushiro-skill",
     cover: "/projects/sushiro-skill.jpg",
-    accent: "SQ",
   },
   {
     name: "Skills",
@@ -42,7 +54,6 @@ export const featuredProjects = [
     stack: ["Python", "Agents", "Automation"],
     href: "https://github.com/Gitnapp/Skills",
     cover: "/projects/skills.jpg",
-    accent: "SK",
   },
   {
     name: "cargo-loading-calc",
@@ -52,12 +63,11 @@ export const featuredProjects = [
     href: "https://github.com/Gitnapp/cargo-loading-calc",
     demo: "https://cargoloadingcalc.vercel.app",
     cover: "/projects/cargo-loading-calc.jpg",
-    accent: "CL",
   },
-];
+]
 
 export const principles = [
   "Small tools should solve a real, repeatable workflow.",
   "AI systems are most useful when they become dependable local infrastructure.",
   "Good software reduces ceremony without hiding the important controls.",
-];
+]

@@ -2,6 +2,7 @@
 dist/
 # generated types
 .astro/
+*.tsbuildinfo
 .vscode/
 # dependencies
 node_modules/
