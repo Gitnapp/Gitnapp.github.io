@@ -9,6 +9,8 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # @gitnapp/* 从 GitHub Packages 安装，npm endpoint 即使对公共包也要求认证。
+  packages: read
 
 concurrency:
   group: pages
@@ -19,15 +21,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+        env:
+          # 默认 GITHUB_TOKEN 读取本仓库以外发布的包可能被拒；届时在仓库
+          # Secrets 里加一个有 read:packages 的 PAT（GH_PACKAGES_TOKEN），
+          # 或在 rational-ui 的包设置里把本仓库加进 Manage Actions access。
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
+      - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
 
   deploy:
     needs: build
