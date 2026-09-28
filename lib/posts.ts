@@ -163,3 +163,12 @@ export async function getPost(slug: string): Promise<{ post: Post; html: string 
   const html = String(await processor.process(content));
   return { post: readPost(file), html };
 }
+
+/**
+ * Frontmatter 剥掉后的原始 markdown 正文——给 llms-full.txt 用的，
+ * 不走 HTML 管线，保持 agent 可直接消费的纯文本形态。
+ */
+export function getPostMarkdown(slug: string): string {
+  const raw = fs.readFileSync(path.join(POSTS_DIR, `${slug}.md`), "utf8");
+  return matter(raw).content.trim();
+}
