@@ -5,6 +5,7 @@ import browserquickswitch from "@/public/projects/browserquickswitch.jpg";
 import iconify from "@/public/projects/iconify.jpg";
 import sushiroSkill from "@/public/projects/sushiro-skill.jpg";
 import skills from "@/public/projects/skills.jpg";
+import bijiCli from "@/public/projects/biji-cli.jpg";
 import cargoLoadingCalc from "@/public/projects/cargo-loading-calc.jpg";
 
 export type Project = {
@@ -60,6 +61,15 @@ export const featuredProjects: Project[] = [
     stack: ["Python", "Agents", "Automation"],
     href: "https://github.com/Gitnapp/Skills",
     cover: skills,
+  },
+  {
+    name: "biji-cli",
+    summary:
+      "CLI + MCP server for Get笔记 (biji.com) — manage notes from the terminal, or expose them to AI clients via biji mcp.",
+    kind: "CLI tool",
+    stack: ["TypeScript", "Node.js", "MCP"],
+    href: "https://www.npmjs.com/package/@gitnapp/biji-cli",
+    cover: bijiCli,
   },
   {
     name: "cargo-loading-calc",
